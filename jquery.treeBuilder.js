@@ -41,10 +41,10 @@ $.fn.extend({
                 if( this === e.target ){
                     let $icon = $item.children('i:first');
                     $icon.toggleClass(iconOpened + " " + iconClosed);
-                    $item.find('.'+subMenuRoot).toggleClass(showClass + " " + hideClass);
+                    $item.find('> .'+subMenuRoot).toggleClass(showClass + " " + hideClass);
                 }
             });
-            if( collapseMenuItems ) $branch.find('.'+subMenuRoot).addClass(hideClass);
+            if( collapseMenuItems ) $branch.find('> .'+subMenuRoot).addClass(hideClass);
         });
         //fire event from the dynamically added icon
         $tree.find('.branch .indicator').each(function(){
